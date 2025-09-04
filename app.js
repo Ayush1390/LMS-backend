@@ -15,9 +15,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan('dev'));
+
+// app.use(cors({
+//     origin:[process.env.FRONTEND_URL],
+//     credentials:true
+// }));
+
 app.use(cors({
-    origin:[process.env.FRONTEND_URL],
-    credentials:true
+    origin: "https://lms-frontend-eukeilecz-ayushs-projects-1d5c37bb.vercel.app/",
+    credentials: true
 }));
 
 app.get('/ping',(_req,res)=>{
@@ -39,3 +45,4 @@ app.all('*',(_req,res)=>{
 app.use(errorMiddleware);
 
 export default app;
+
