@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 // }));
 
 app.use(cors({
-    origin: "https://lms-frontend-phi-lemon.vercel.app/",
+    origin: "https://lms-frontend-phi-lemon.vercel.app",
     credentials: true
 }));
 
@@ -45,5 +45,6 @@ app.all('*',(_req,res)=>{
 app.use(errorMiddleware);
 
 export default app;
+
 
 
