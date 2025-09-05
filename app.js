@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 // }));
 
 app.use(cors({
-    origin: "https://lms-frontend-eukeilecz-ayushs-projects-1d5c37bb.vercel.app/",
+    origin: "https://lms-frontend-phi-lemon.vercel.app/",
     credentials: true
 }));
 
@@ -45,4 +45,5 @@ app.all('*',(_req,res)=>{
 app.use(errorMiddleware);
 
 export default app;
+
 
